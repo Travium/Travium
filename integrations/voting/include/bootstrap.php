@@ -1,6 +1,6 @@
 <?php
 ini_set("error_log", __DIR__ . "/voting.log");
-$globalConfigFileLocation = dirname(__DIR__, 2) . '/config.php';
+$globalConfigFileLocation = dirname(__DIR__, 3) . '/config.php';
 if (!is_file($globalConfigFileLocation)) {
     die("Wrong configuration!");
 }

@@ -492,17 +492,17 @@ $config = (object)[
     ],
     'Voting'                => (object)[
         'TopG'        => (object)[
-            'link'     => '',
+            'link'     => $globalConfig['voting']['topg'],
             'interval' => 43200,
             'gold'     => 50,
         ],
         'ArenaTop100' => (object)[
-            'link'     => '',
+            'link'     => $globalConfig['voting']['arenatop100'],
             'interval' => 43200,
             'gold'     => 50,
         ],
         'GTop100'     => (object)[
-            'link'     => '',
+            'link'     => $globalConfig['voting']['gtop100'],
             'interval' => 86400,
             'gold'     => 50,
         ],
