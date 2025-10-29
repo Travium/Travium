@@ -1,4 +1,6 @@
-## README.MD is under construction.
+## README.md is under construction.
+
+Join our discord: https://discord.gg/Y9VFBnVz
 
 Requirements:
 1. Clean Ubuntu 24.04 LTS server
