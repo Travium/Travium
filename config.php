@@ -22,18 +22,31 @@ $globalConfig['dataSources']['globalDB']['database'] = 'maindb';
 $globalConfig['dataSources']['globalDB']['charset'] = 'utf8mb4';
 
 // Voting
+$globalConfig['voting'] = [
+    'secret'        => 'INIT_SECRET_TOKEN',
+    'gtop100'       => 'https://gtop100.com/Travian/server-105295',
+    'topg'          => 'https://topg.org/travian-private-servers/server-676770',
+    'arenatop100'   => 'https://www.arena-top100.com/index.php?a=in&u=hoxer',
+];
+
+// Pingback / Postback URLs
+/**
+ * https://voting.INIT_DOMAIN/process.php?token=INIT_SECRET_TOKEN&type=gtop100
+ * https://voting.INIT_DOMAIN/process.php?token=INIT_SECRET_TOKEN&type=topg
+ * https://voting.INIT_DOMAIN/process.php?token=INIT_SECRET_TOKEN&type=arenatop100
+ */
 
 // Email
 $globalConfig['mailer'] = [
-  'driver' 				=> 'local', // 'local' or 'smtp'
-  'from_email' 			=> 'noreply@INIT_DOMAIN',
+  'driver' 				    => 'local', // 'local' or 'smtp'
+  'from_email' 			    => 'noreply@INIT_DOMAIN',
   'from_name'				=> 'Travium',
   // SMTP details (not required with local driver)
   'smtp_host'				=> '',
   'smtp_user'				=> '',
   'smtp_pass'				=> '',
   'smtp_port'				=> '587',
-  'smtp_encryption'		=> 'tls',
+  'smtp_encryption'		    => 'tls',
   'smtp_auth'				=> true,
 ];
 

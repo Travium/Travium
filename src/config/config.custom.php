@@ -91,11 +91,7 @@ $config->game->deletionTime = 3600 * 1;
         $config->gold->changeName->impossibleAfterPopulation = 15000;
         $config->gold->accountChangeNameGold = 100;
     }
-    {
-        $config->Voting->TopG->link = 'http://topg.org/   ';
-        $config->Voting->GTop100->link = 'https://gtop100.com/';
-        $config->Voting->ArenaTop100->link = 'https://www.arena-top100.com/';
-    }
+
 }
 //gold config
 $config->gold->dailyGold = $config->gold->startGold = 50;

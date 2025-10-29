@@ -3,7 +3,7 @@ use Core\Types;
 use Core\WebService;
 require __DIR__ . "/include/bootstrap.php";
 $type = strtolower($_GET['type']) ?? null;
-if (!isset($_REQUEST['token']) || strcmp($_REQUEST['token'], 'A731mYCG') !== 0) {
+if (!isset($_REQUEST['token']) || strcmp($_REQUEST['token'], $globalConfig['voting']['secret']) !== 0) {
     exit("Invalid token!");
 }
 error_log('Voting received.');
@@ -18,12 +18,14 @@ if ($type == 'topg') {
     add_gold(Types::TOP_G, $user_ip, (int) $worldUniqueId, (int) $playerId, 'TopG');
 } else if ($type == 'gtop100') {
     error_log('GTop100 Received: ' . print_r($_REQUEST, true));
+    /* GTOP stopped using this - Secret token should be enough
     $authorized = array("198.148.82.98", "198.148.82.99"); // authorized ips to prevent exploitation
     if (!in_array(WebService::ipAddress(), $authorized))
         die("Invalid IP address.");
+    */
     $voterIP = $_POST["VoterIP"]; // voter ip address
     $success = abs($_POST["Successful"]); // 1 for error, 0 for successful
-    $reason = $_POST["Reason"]; // log reason the vote failed
+    $reason = $_POST["Reason"] ?? ''; // log reason the vote failed
     $pingUsername = $_POST["pingUsername"];
     if (empty($voterIP) || intval($success) === 1) {
         die("Error");

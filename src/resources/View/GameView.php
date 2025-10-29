@@ -958,7 +958,7 @@ class GameView
         if (!empty($voting->GTop100->link)) {
             //type 3
             $voting_services['GTop100'] = [
-                'link'         => $voting->GTop100->link . '&pingUsername=' . $userUnique,
+                'link'         => $voting->GTop100->link . '?pingUsername=' . $userUnique,
                 'gold'         => $voting->GTop100->gold,
                 'votingLog'    => null,
                 'voteInterval' => $voting->GTop100->interval
