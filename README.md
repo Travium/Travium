@@ -9,3 +9,8 @@ Requirements:
 
 Guide and 1-click installer:
 https://init.travium.net/
+
+
+Credits:
+- Many contributors to this project. FULL LIST IS TO BE ADDED
+- Based on source originaly published by Advocaite https://github.com/advocaite/TravianT4.6
