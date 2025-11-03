@@ -1515,12 +1515,11 @@ class InstallerModel
     {
         $db = DB::getInstance();
         $register = new RegisterModel();
-        $register->addUser("Support", sha1($password), '', 0, 0, TRUE, false, true);
-        $random_multihunter_password = substr(sha1(get_random_string(12)), 0, 12);
+        $register->addUser("Support", sha1(time() . get_random_string(12)), '', 0, 0, TRUE, false, true);
         $natar_kid = Formulas::xy2kid(0, 0);
 
         $natars = $register->addUser(T("Global", "NatarsName"),
-            sha1(time() . get_random_string(5)),
+            sha1(time() . get_random_string(12)),
             '',
             5,
             $natar_kid,
@@ -1530,7 +1529,7 @@ class InstallerModel
         $db->query("UPDATE users SET protection=0, kid=$natar_kid, desc1='[#natars]' WHERE id=$natars");
 
         $multihunter = $register->addUser("Multihunter",
-            sha1($random_multihunter_password),
+            sha1($password),
             '',
             1,
             Formulas::xy2kid(1, 0),

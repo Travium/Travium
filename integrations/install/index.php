@@ -691,7 +691,7 @@ function run_cmd(string $cmd): array {
 
                     <label>Admin password</label>
                     <input name="admin_password" type="password" value="<?=htmlspecialchars($_POST['admin_password'] ?? $defaults['admin_password'])?>">
-                    <div class="hint">Password for user "Support"</div>
+                    <div class="hint">Password for user "Multihunter"</div>
                 </div>
             </div>
 
