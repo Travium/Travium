@@ -1,6 +1,7 @@
 ## README.md is under construction.
 
-For Update and Support join our discord:
+For Updates and Support join our discord:
+
 https://discord.gg/TCjyvcctDg
 
 Requirements:
