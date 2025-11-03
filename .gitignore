@@ -1,0 +1,10 @@
+config.php
+/vendor/
+/servers/
+/composer.lock
+/composer.phar
+/.env
+/node_modules/
+/.idea/
+/.vscode/
+.DS_Store
